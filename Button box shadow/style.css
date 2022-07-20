@@ -1,0 +1,94 @@
+*
+{
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
+  background: black;
+  flex-direction: column;
+  gap: 60px;
+}
+a
+{
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
+  padding: 20px 30px;
+  transition: 0.3s;
+}
+a:hover
+{
+  letter-spacing: 2px;
+  background: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 40px var(--clr);
+}
+a::before
+{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: black;
+
+}
+a span
+{
+  position: relative;
+  z-index: 1;
+}
+a i
+{
+  position: a3.5bsolute;
+  inset: 0;
+  display: block;
+}
+a i::before
+{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  left: 80%;
+  top: -3.5px;
+  
+  border: 2px solid var(--clr);
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+a:hover i::before
+{
+  width: 20px;
+  height: 10px;
+  left: 20%;
+}
+a i::after
+{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  left: 20%;
+  bottom: -3.5px;
+  
+  border: 2px solid var(--clr);
+  background: #27282c;
+  transition: 1s;
+}
+a:hover i::after
+{
+  width: 20px;
+  height: 10px;
+  left: 80%;
+}
